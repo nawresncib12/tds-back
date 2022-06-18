@@ -1,0 +1,36 @@
+.reason {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.reason .reasonImage {
+    position: relative;
+}
+
+.reasonImage img {
+    position: absolute;
+    width: 40%;
+    top: 30%;
+    right: 35%;
+    height: 50%;
+    z-index: 3;
+}
+
+.reasonImage svg {
+    transform: scale(0.9);
+}
+
+.reason .reasonInfo h2 {
+    margin-top: 0;
+    color: #4daaaa;
+    font-size: calc(20px + 1vmin);
+}
+
+.reason .reasonInfo p {
+    color: #0d3636;
+    font-size: calc(12px + 1vmin);
+    width: 90%;
+    padding: 0 5%;
+}

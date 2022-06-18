@@ -1,0 +1,28 @@
+.why {
+    padding: 10px 100px;
+    padding-bottom: 90px;
+    z-index: 1;
+}
+
+.why h1 {
+    color: #4daaaa;
+    font-size: calc(50px + 1vmin);
+    text-align: center;
+}
+
+.reasons {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .why {
+        padding: 10px 50px;
+        padding-bottom: 40px;
+    }
+    .reasons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}

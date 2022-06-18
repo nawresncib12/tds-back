@@ -1,0 +1,22 @@
+.footer {
+    background-color: #4daaaa;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.footer .navigation {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+    font-size: calc(25px +1vmin);
+}
+
+.footer h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

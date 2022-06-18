@@ -1,0 +1,65 @@
+.steps {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+    padding-bottom: 20px;
+    z-index: 1;
+    gap: 20px;
+}
+
+.steps .button {
+    padding-top: 10px;
+    width: 50%;
+}
+
+.stepImage {
+    transform: scale(0.9);
+}
+
+.stepInfo h3 {
+    color: #0d3636;
+    font-size: calc(15px + 1vmin);
+}
+
+.stepInfo h1 {
+    color: #4daaaa;
+    font-size: calc(40px + 1vmin);
+}
+
+.stepList {
+    margin-bottom: 20px;
+}
+
+.step {
+    display: flex;
+}
+
+.step .stepNumber {
+    color: #4daaaa;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    border: 2px solid #4daaaa;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.step .stepTitle {
+    font-weight: 400;
+    line-height: 30px;
+    font-size: calc(20px + 1vmin);
+}
+
+@media only screen and (max-width: 1000px) {
+    .steps {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px 50px;
+        padding-bottom: 40px;
+    }
+}

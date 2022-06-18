@@ -1,0 +1,61 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4daaaa;
+    width: 100vw;
+    z-index: 699;
+    opacity: 0;
+    animation: anim 0.3s linear forwards 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: calc(20px + 1vmin);
+    min-height: 100vh;
+    cursor: none;
+}
+
+.navbar span {
+    font-size: calc(40px + 1vmin);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.navbar span {
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.navbar span:hover {
+    background-image: linear-gradient(#fff, #fff);
+    background-size: 200% 5px;
+    background-repeat: no-repeat;
+    animation: underline 0.5s ease-in;
+    background-position: left 0% bottom 0;
+}
+
+@keyframes underline {
+    0% {
+        background-position: right -100% bottom 0;
+    }
+    100% {
+        background-position: left 0 bottom 0;
+    }
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .navbar span {
+        zoom: 40%;
+    }
+}
