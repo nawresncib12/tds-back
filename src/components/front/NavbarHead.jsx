@@ -49,7 +49,7 @@ const NavbarHead = (props) => {
             navigate("/home");
           }}
         >
-          <h3 className={`${props.only ? classes.blue : ""}`}>Trees</h3>
+          <h3 className={`${props.only ? classes.blue : ""}`}>AgriLine</h3>
         </div>
         <div></div>
         <div className={classes.buttonNav}>

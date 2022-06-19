@@ -17,7 +17,7 @@ const Steps = () => {
           <div className={classes.step}>
             <h2 className={classes.stepNumber}>1</h2>
             <h2 className={classes.stepTitle}>
-              Create you free AgriLine account for farmer or buyer
+              Create your free AgriLine account for farmer or buyer
             </h2>
           </div>
           <div className={classes.step}>
@@ -27,7 +27,7 @@ const Steps = () => {
           <div className={classes.step}>
             <h2 className={classes.stepNumber}>3</h2>
             <h2 className={classes.stepTitle}>
-              Buy or sell fruits and vegetables
+              Get a machine learning crop predection to optimize decision making  
             </h2>
           </div>
         </div>

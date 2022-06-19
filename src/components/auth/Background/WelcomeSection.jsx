@@ -196,9 +196,9 @@ const WelcomeSection = (props) => {
               fill="#fff"
             />
           </svg>
-          <h1>Lorem ipsum coascd elit</h1>
+          <h1>Buy fresh products with a single click</h1>
           <div className={classes.line}></div>
-          <p>Lorem ipsum dolor sit amet contur adipiscing elit</p>
+          
           {!props.submitted && (
             <button onClick={props.onShow}>Get started</button>
           )}
