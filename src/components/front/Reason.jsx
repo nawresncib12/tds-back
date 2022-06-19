@@ -1,6 +1,6 @@
 import classes from "./Reason.module.css";
 import security from "../../assets/security.png"
-const Reason = () => {
+const Reason = (props) => {
   return (
     <div className={classes.reason}>
       <div className={classes.reasonImage}>
@@ -24,9 +24,9 @@ const Reason = () => {
         <img src={security} alt="security" />
       </div>
       <div className={classes.reasonInfo}>
-        <h2>Simplicity</h2>
+        <h2>{props.name}</h2>
         <p>
-          Kraken makes it easy to buy and sell crypto using our mobile apps.{" "}
+        {props.description}
         </p>
       </div>
     </div>

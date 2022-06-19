@@ -10,12 +10,12 @@ const Hero = () => {
         <img className={classes.wave} src={image} alt="waves" />
       }
       <div className={classes.heroInfo}>
-        <h2>Buy bitcoin 
+        <h2>Buy agricultural products 
             <br />
-            & crypto</h2>
+            & sell them</h2>
         <p>
-          Sign up today to easily buy <strong>100+ </strong> cryptocurrencies.
-          Get started in minutes with as little as <strong>$10</strong>.
+          Sign up today to easily buy <strong>fresh </strong> products.
+          Get started in minutes and help our <strong>tunisian</strong> market.
         </p>
         <div className={classes.button}>
         <Button color="#4daaaa
