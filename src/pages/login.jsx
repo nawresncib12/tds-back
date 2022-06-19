@@ -20,7 +20,11 @@ const Login = () => {
     async function log() {
       if (await loggedIn()) {
         setLoading(false);
-        navigate("/home");
+        if (user.userRole === "Farmer") {
+          navigate("/dashboard");
+        } else {
+          navigate("/home");
+        }
       } else {
         setLoading(false);
       }
@@ -35,7 +39,6 @@ const Login = () => {
       ) : (
         <Background resetPass={false} toggle={toggle} auth={false}></Background>
       )}
-     
     </>
   );
 };

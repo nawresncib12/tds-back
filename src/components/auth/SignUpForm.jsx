@@ -3,7 +3,6 @@ import classes from "./SignUpForm.module.css";
 import { StepCircle } from "../../UI/StepCircle";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { SocialMediaBox } from "./SocialMediaBox";
 import { StepOne } from "./StepOne";
 import { StepTwo } from "./StepTwo";
 import { Success } from "./Success";
@@ -41,7 +40,11 @@ export const SignUpForm = () => {
   const [failedVerify, setFailedVerify] = useState("");
   const submitSignup = async (values) => {
     setLoading(true);
-    let data = { email: values.email, password: values.password };
+    let data = {
+      email: values.email,
+      password: values.password,
+      userRole: values.role,
+    };
     const res = await signUp(data);
     if (res === "true") {
       nextHandler();
@@ -68,7 +71,7 @@ export const SignUpForm = () => {
       initialValues={{
         email: "",
         password: "",
-        role:"Buyer"
+        role: "Buyer",
       }}
       validationSchema={next === 1 ? validate : validateCode}
       onSubmit={(values, { setSubmitting, resetForm }) => {

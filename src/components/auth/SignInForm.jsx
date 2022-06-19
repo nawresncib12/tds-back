@@ -50,7 +50,7 @@ export const SignInForm = (props) => {
     } else {
       props.onSubmitForm();
       setTimeout(() => {
-        navigate("/home");
+        navigate("/dashboard");
       }, 2000);
     }
   };
