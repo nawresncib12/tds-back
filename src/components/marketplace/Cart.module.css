@@ -54,3 +54,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.empty {
+    text-align: center;
+    font-size: calc(50px + 1vmin);
+    color: pink;
+}

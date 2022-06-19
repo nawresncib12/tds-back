@@ -31,7 +31,7 @@ const portalElement = document.getElementById("overlays");
 
 const CartModal = (props) => {
   const dispatch = useDispatch();
-  const submitCheckout = async (values) => {
+  const submitCheckout =  (values) => {
     console.log(values);
     dispatch(cartActions.emptyCart());
     props.setOpen(false);
@@ -100,7 +100,6 @@ const CartModal = (props) => {
                 validationSchema={validate}
                 onSubmit={(values) => {
                   submitCheckout(values);
-                  setloading(true);
                 }}
               >
                 {(formik) => (
@@ -135,7 +134,7 @@ const CartModal = (props) => {
                         </div>
                       </div>
                       <h5 className={classes.note}>
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                        Submit and pay online !
                       </h5>
                       <div className={classes.submit}>
                         <div className={classes.button}>

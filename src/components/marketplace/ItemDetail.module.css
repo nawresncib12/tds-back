@@ -1,0 +1,87 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    max-height: fit-content;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 600;
+    animation: slide-down 300ms ease-out forwards;
+    overflow: auto;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    overflow: auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 600;
+    animation: slide-down 300ms ease-out forwards;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.itemInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.itemInfo img {
+    max-width: 200px;
+}
+
+.itemInfo h3 {
+    color: pink;
+}
+
+@media only screen and (max-width: 1000px) {
+    .itemInfo {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+}

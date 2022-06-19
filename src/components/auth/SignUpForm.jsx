@@ -68,6 +68,7 @@ export const SignUpForm = () => {
       initialValues={{
         email: "",
         password: "",
+        role:"Buyer"
       }}
       validationSchema={next === 1 ? validate : validateCode}
       onSubmit={(values, { setSubmitting, resetForm }) => {

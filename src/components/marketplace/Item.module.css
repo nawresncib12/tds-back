@@ -1,9 +1,15 @@
 .shopItem {
+    cursor: pointer;
     padding: 15px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.shopItem:hover {
+    background-color: #83c6c6;
+    color: white;
 }
 
 .item {
@@ -16,7 +22,19 @@
 .shopItem h3 {
     margin: 0;
     font-size: calc(20px + 1vmin);
-    color: #4daaaa;
+    color: #093c3c;
+}
+
+.shopItem:hover h3,
+.shopItem:hover h4 {
+    color: white;
+}
+
+.shopItem .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .shopItem h4 {
@@ -26,9 +44,11 @@
 }
 
 .button {
+    margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
 .button button {
@@ -41,18 +61,38 @@
     cursor: pointer;
 }
 
+.button .see {
+    background-color: white;
+    color: #4daaaa;
+    border: 1px solid #4daaaa;
+}
+
 .button button:hover {
     background-color: #337171;
+}
+
+.shopItem:hover .button .buy {
+    animation: bounce 2s ease-out;
 }
 
 .shopItem img {
     margin: auto;
     max-width: 60%;
+    filter: drop-shadow(5px 10px 4px #888888);
 }
 
-.itemDetail {
-    display: flex;
-    justify-content: space-between;
+@keyframes bounce {
+    0%,
+    50% {
+        transform: translateY(5px);
+    }
+    25%,
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .item p {
@@ -79,4 +119,10 @@
 .icon:hover {
     cursor: pointer;
     color: #123737;
+}
+
+.shopItem h4 p {
+    font-weight: 400;
+    display: inline-flex;
+    padding-right: 10px;
 }

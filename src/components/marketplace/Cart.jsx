@@ -3,7 +3,9 @@ import Button from "../../UI/Button";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import CartModal from "./CartModal";
+import { useNavigate } from "react-router-dom";
 const Cart = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const items = useSelector((state) => state.cart.items);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -18,11 +20,17 @@ const Cart = () => {
   };
   return (
     <div className={classes.cartContainer}>
-      {open && <CartModal items={items} total={getTotal()} setOpen={setOpen}></CartModal>}
+      {open && (
+        <CartModal
+          items={items}
+          total={getTotal()}
+          setOpen={setOpen}
+        ></CartModal>
+      )}
       <div className={classes.cart}>
-        <h1>Your Cart</h1>
         {totalQuantity != 0 && (
           <>
+            <h1>Your Cart</h1>
             <div className={classes.cartItems}>
               <div className={classes.item}>
                 <h5>Name</h5>
@@ -56,6 +64,21 @@ const Cart = () => {
                 }}
               >
                 Submit Cart
+              </Button>
+            </div>
+          </>
+        )}{" "}
+        {totalQuantity == 0 && (
+          <>
+            <h2 className={classes.empty}>Your cart is empty</h2>
+            <div className={classes.button}>
+              <Button
+                onClick={() => {
+                  navigate("/shop");
+                }}
+                color="#4daaaa"
+              >
+                See market place
               </Button>
             </div>
           </>
