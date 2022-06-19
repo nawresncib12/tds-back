@@ -34,7 +34,9 @@ export const SecondaryListItems = (props) => {
       <ListSubheader component="div" inset>
         Actions
       </ListSubheader>
-      <ListItemButton>
+      <ListItemButton  onClick={() => {
+         props.setActive(3);
+        }}>
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>

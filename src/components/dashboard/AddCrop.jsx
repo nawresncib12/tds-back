@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 const AddCrop = () => {
-  const navigate = useNavigate();
   const validate = Yup.object({
     email: Yup.string()
       .email("Email is invalid !")
@@ -31,7 +30,7 @@ const AddCrop = () => {
       {(formik) => (
         <div className={classes.signInForm}>
           <div className={classes.header}>
-            <h3 className={classes.title}>HI</h3>
+            <h3 className={classes.title}>Please fill up the form data to calculate your data.</h3>
           </div>
           <div className={classes.form}>
             <Form>
@@ -46,7 +45,6 @@ const AddCrop = () => {
                 name="password"
                 type="password"
                 form="signin"
-                failed={failed}
               />
               <h5
                 className={classes.note}

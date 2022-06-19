@@ -15,7 +15,7 @@ export const data = {
         "#4daaaa",
         "rgba(54, 162, 235, 1)",
         "rgba(255, 206, 86, 1)",
-      ],cutout:60,
+      ],cutout:80,
       borderWidth: 1,
       hoverOffset: 10,
       spacing:5,

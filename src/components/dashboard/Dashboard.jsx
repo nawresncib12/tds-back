@@ -20,6 +20,7 @@ import { MainListItems, SecondaryListItems } from "./ListItems";
 import YearlyProduction from "./YearlyProduction";
 import { DoughnutChart } from "./DoughnutChart";
 import AddCrop from "./AddCrop";
+import AddProduct from "./AddProduct";
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
@@ -146,32 +147,8 @@ function DashboardContent() {
           {active === 1 && (
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
               <Grid container spacing={3}>
-                {/* Chart 
-              <div className={classes.badgets}>
-                <Badget
-                  name="Stocks"
-                  increase={false}
-                  number={563.89}
-                  percentage={10.5}
-                  color={2}
-                ></Badget>
-                <Badget
-                  name="Sales"
-                  increase={true}
-                  number={856.53}
-                  percentage={15}
-                  color={1}
-                ></Badget>
-
-                <Badget
-                  name="Stocks"
-                  increase={false}
-                  number={563.89}
-                  percentage={10.5}
-                  color={2}
-                ></Badget>
-              </div>*/}
-                <Grid item xs={12} md={8} lg={9}>
+        
+                <Grid item xs={12} md={8} lg={8}>
                   <Paper
                     sx={{
                       p: 2,
@@ -187,7 +164,7 @@ function DashboardContent() {
                   item
                   xs={12}
                   md={4}
-                  lg={3}
+                  lg={4}
                   sx={{
                     p: 2,
                     display: "flex",
@@ -219,7 +196,9 @@ function DashboardContent() {
               </Grid>
             </Container>
           )}
+          
           {active === 2 && <AddCrop></AddCrop>}
+          {active === 3 && <AddProduct></AddProduct>}
         </Box>
       </Box>
     </ThemeProvider>
