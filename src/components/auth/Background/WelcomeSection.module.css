@@ -16,7 +16,7 @@
 
 .welcomeSection .content {
     height: 100vh;
-    color: #A689E3;
+    color: #4daaaa;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,7 @@
 .content .line {
     width: 50px;
     height: 10px;
-    background-color: #A689E3;
+    background-color: #4daaaa;
     border-radius: 5px;
 }
 
@@ -38,7 +38,7 @@
 
 .welcomeSection .content button {
     display: none;
-    background-color: #A689E3;
+    background-color: #4daaaa;
     outline: none;
     color: white;
     border-radius: 5px;

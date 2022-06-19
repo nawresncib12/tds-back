@@ -1,8 +1,12 @@
 import Hero from "../components/rent/Hero";
+import NavbarHead from "../components/front/NavbarHead";
+import TreeList from "../components/rent/TreeList";
 const Rent = () => {
-  return <div>
+  return <>
+    <NavbarHead color="#fff"></NavbarHead>
     <Hero></Hero>
-  </div>;
+    <TreeList></TreeList>
+  </>;
 };
 
 export default Rent;

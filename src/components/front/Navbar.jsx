@@ -3,7 +3,9 @@ import { logout, loggedIn } from "../../api/api.user";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomCursor from "../../UI/customCursor/CustomCursor";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const navigate = useNavigate();
   const [logged, setLogged] = useState(false);
   useEffect(() => {
@@ -48,15 +50,18 @@ const Navbar = () => {
           document.body.style.overflow = "auto";
         }}
       >
-        Offer a tree
+        Market Place
       </span>
       <span
         onClick={() => {
-          navigate("/rent");
+          navigate("/cart");
           document.body.style.overflow = "auto";
         }}
       >
-        Rent a tree
+        Shopping cart
+        {totalQuantity != 0 && (
+          <p className={classes.number}> {totalQuantity} </p>
+        )}
       </span>
 
       <span

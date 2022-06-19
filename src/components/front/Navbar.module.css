@@ -59,3 +59,17 @@
         zoom: 40%;
     }
 }
+
+.number {
+    font-size: calc(15px + 1vmin);
+    border: solid 1px white;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 60px;
+}

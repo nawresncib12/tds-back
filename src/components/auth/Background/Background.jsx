@@ -2,7 +2,6 @@ import { useState } from "react";
 import classes from "./Background.module.css";
 import FormSection from "./FormSection";
 import WelcomeSection from "./WelcomeSection";
-import logo from "../../../assets/logo.png";
 const Background = (props) => {
   const [showForm, setshowForm] = useState(
     props.toggle && window.innerWidth < 1000

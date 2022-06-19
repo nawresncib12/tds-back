@@ -16,7 +16,7 @@ export const TextField = ({ label, ...props }) => {
   const [isFocus, setIsFocus] = useState(false);
   const changeColor = () => {
     setIsFocus(true);
-    setLabelColor("#A689E3");
+    setLabelColor("#4daaaa");
   };
   const resetColor = () => {
     setIsFocus(false);

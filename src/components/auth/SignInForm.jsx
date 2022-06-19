@@ -151,7 +151,7 @@ export const SignInForm = (props) => {
                     Forgot your password ?
                   </h5>
                   <div className={classes.submit}>
-                    <Button color="#A689E3" content="Submit" type="submit" />
+                    <Button color="#4daaaa" content="Submit" type="submit" />
                   </div>
                 </Form>
               </div>
@@ -177,7 +177,7 @@ export const SignInForm = (props) => {
                   />
                   <br />
                   <div className={classes.submit}>
-                    <Button color="#A689E3" content="Submit" type="submit" />
+                    <Button color="#4daaaa" content="Submit" type="submit" />
                   </div>
                 </div>
               </Form>

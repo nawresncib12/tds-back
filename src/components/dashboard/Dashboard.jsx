@@ -1,5 +1,4 @@
 import * as React from "react";
-import classes from "./Dashboard.module.css"
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
@@ -14,16 +13,13 @@ import Badge from "@mui/material/Badge";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import { mainListItems, secondaryListItems } from "./ListItems";
-import Chart from "./Chart";
-import Deposits from "./Deposits";
-import Orders from "./Orders";
-import Badget from "./Badget";
+import { MainListItems, SecondaryListItems } from "./ListItems";
 
+import YearlyProduction from "./YearlyProduction";
+import { DoughnutChart } from "./DoughnutChart";
+import AddCrop from "./AddCrop";
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
@@ -74,6 +70,7 @@ const mdTheme = createTheme();
 
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
+  const [active, setActive] = React.useState(1);
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -84,7 +81,7 @@ function DashboardContent() {
         <CssBaseline />
         <AppBar position="absolute" open={open}>
           <Toolbar
-            style={{ background: "#A689E3" }}
+            style={{ background: "#4daaaa" }}
             sx={{
               pr: "24px", // keep right padding when drawer closed
             }}
@@ -108,13 +105,8 @@ function DashboardContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Farmer's Dashboard
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -132,9 +124,10 @@ function DashboardContent() {
           </Toolbar>
           <Divider />
           <List component="nav">
-            {mainListItems}
+            {" "}
+            <MainListItems setActive={setActive}></MainListItems>
             <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
+            <SecondaryListItems setActive={setActive}></SecondaryListItems>
           </List>
         </Drawer>
         <Box
@@ -150,53 +143,83 @@ function DashboardContent() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              {/* Chart */}  
+          {active === 1 && (
+            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+              <Grid container spacing={3}>
+                {/* Chart 
               <div className={classes.badgets}>
-      
-      
-      <Badget name="Stocks" increase={false} number={563.89} percentage={10.5} color={2}></Badget>
-      <Badget name="Sales" increase={true} number={856.53} percentage={15} color={1}></Badget>
+                <Badget
+                  name="Stocks"
+                  increase={false}
+                  number={563.89}
+                  percentage={10.5}
+                  color={2}
+                ></Badget>
+                <Badget
+                  name="Sales"
+                  increase={true}
+                  number={856.53}
+                  percentage={15}
+                  color={1}
+                ></Badget>
 
-      <Badget name="Stocks" increase={false} number={563.89} percentage={10.5} color={2}></Badget>
-      </div>
-              <Grid item xs={12} md={8} lg={9}>
-                
-                <Paper
+                <Badget
+                  name="Stocks"
+                  increase={false}
+                  number={563.89}
+                  percentage={10.5}
+                  color={2}
+                ></Badget>
+              </div>*/}
+                <Grid item xs={12} md={8} lg={9}>
+                  <Paper
+                    sx={{
+                      p: 2,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <YearlyProduction></YearlyProduction>
+                  </Paper>
+                </Grid>
+                {/* Doughnut chart */}
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  lg={3}
                   sx={{
                     p: 2,
                     display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                     flexDirection: "column",
-                    height: 240,
                   }}
                 >
-                  <Chart />
-                </Paper>
+                  <Paper
+                    sx={{
+                      p: 2,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <DoughnutChart />
+                  </Paper>
+                </Grid>
+                {/* Recent Orders */}
+                <Grid item xs={12}>
+                  <Paper
+                    sx={{ p: 2, display: "flex", flexDirection: "column" }}
+                  >
+                    //form
+                  </Paper>
+                </Grid>
               </Grid>
-              {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
-                
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 240,
-                  }}
-                >
-                  <Deposits />
-                </Paper>
-              </Grid>
-              {/* Recent Orders */}
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                  <Orders />
-                </Paper>
-              </Grid>
-            </Grid>
-          
-          </Container>
+            </Container>
+          )}
+          {active === 2 && <AddCrop></AddCrop>}
         </Box>
       </Box>
     </ThemeProvider>

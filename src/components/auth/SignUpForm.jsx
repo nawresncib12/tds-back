@@ -82,25 +82,25 @@ export const SignUpForm = () => {
             <h3 className={classes.title}>Sign up</h3>
           </div>
           <div className={classes.stepContainer}>
-            <StepCircle number="1" color={next >= 1 ? "#A689E3" : "#E5E5E5"} />
+            <StepCircle number="1" color={next >= 1 ? "#4daaaa" : "#E5E5E5"} />
             <div
               className={classes.line}
               style={
                 next >= 2
-                  ? { borderColor: "#A689E3", backgroundColor: "#A689E3" }
+                  ? { borderColor: "#4daaaa", backgroundColor: "#4daaaa" }
                   : { borderColor: "#E5E5E5" }
               }
             ></div>
-            <StepCircle number="2" color={next >= 2 ? "#A689E3" : "#E5E5E5"} />
+            <StepCircle number="2" color={next >= 2 ? "#4daaaa" : "#E5E5E5"} />
             <div
               className={classes.line}
               style={
                 next === 3
-                  ? { borderColor: "#A689E3", backgroundColor: "#A689E3" }
+                  ? { borderColor: "#4daaaa", backgroundColor: "#4daaaa" }
                   : { borderColor: "#E5E5E5" }
               }
             ></div>
-            <StepCircle number="3" color={next >= 3 ? "#A689E3" : "#E5E5E5"} />
+            <StepCircle number="3" color={next >= 3 ? "#4daaaa" : "#E5E5E5"} />
           </div>
           <div className={classes.form}>
             {next === 1 && (

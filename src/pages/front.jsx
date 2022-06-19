@@ -10,7 +10,7 @@ const Front = () => {
   const navigate = useNavigate();
   return (
     <>
-      <NavbarHead></NavbarHead>
+      <NavbarHead color="#d6f4f4"></NavbarHead>
       <Hero></Hero>
       <Steps></Steps>
       <Why></Why>

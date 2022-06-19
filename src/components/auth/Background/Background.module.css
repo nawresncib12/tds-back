@@ -4,8 +4,8 @@
     background-size: cover;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: #e5e5f7;
-    background-image: radial-gradient(#866bbe 0.5px, #e5e5f7 0.5px);
+    background-color: #dcefef;
+    background-image: radial-gradient(#4daaaa 0.5px, #dcefef 0.5px);
     background-size: 100px 100px;
 }
 
@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: #A689E3;
+    color: #4daaaa;
     font-weight: bolder;
 }
 

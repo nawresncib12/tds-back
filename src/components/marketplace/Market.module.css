@@ -1,0 +1,15 @@
+.market {
+    padding: 0px 100px 0px 100px;
+}
+
+.market h1 {
+    color: #4daaaa;
+    text-align: center;
+    font-size: calc(40px + 1vmin);
+}
+
+@media only screen and (max-width: 1000px) {
+    .market {
+        padding: 0px 50px;
+    }
+}

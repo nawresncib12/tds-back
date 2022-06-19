@@ -1,0 +1,19 @@
+.itemList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemList .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .itemList .items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

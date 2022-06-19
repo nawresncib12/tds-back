@@ -34,7 +34,8 @@ const NavbarHead = (props) => {
     };
   }, []);
   return (
-    <div className={classes.homeNavbarHead}>
+    <div className={classes.homeNavbarHead} 
+    style={{backgroundColor:props.color}}>
       {navbar === "opened" && <Navbar></Navbar>}
       <div className={`${classes.header}  ${
         props.only
@@ -126,10 +127,11 @@ const NavbarHead = (props) => {
       </div>
 
       <svg
+
         className={`${classes.wave} ${props.only !== true ? "" : classes.hide}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        style={{backgroundColor:"#d6f4f4"}}
+        style={{backgroundColor:props.color}}
       >
         <path
           ref={target}

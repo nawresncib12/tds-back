@@ -8,7 +8,7 @@
 .signInForm .header {
     font-size: 30px;
     font-weight: 600;
-    color: #A689E3;
+    color: #4daaaa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,7 @@
 }
 
 .signInForm .note:hover {
-    color: #A689E3;
+    color: #4daaaa;
 }
 
 .social {

@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/404";
 import Front from "./pages/front";
 import Rent from "./pages/rent";
+import Shop from "./pages/shop";
+import Cart from "./components/marketplace/Cart";
 function App() {
   return (
       <Router>
@@ -16,6 +18,8 @@ function App() {
           <Route exact path="/signup" element={<SignUp></SignUp>} />
           <Route exact path="/home" element={<Home></Home>} /> 
           <Route exact path="/rent" element={<Rent></Rent>} /> 
+          <Route exact path="/shop" element={<Shop></Shop>} /> 
+          <Route exact path="/cart" element={<Cart></Cart>} /> 
           <Route exact path="/resetPassword/:token" element={<ResetPassword></ResetPassword>} />
           <Route exact path="/*" element={<NotFound/>} />
         </Routes>
